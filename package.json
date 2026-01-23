@@ -1,5 +1,5 @@
 {
-  "name": "vxe-table-plugin-export-xlsx",
+  "name": "@Earthwormes/vxe-table-plugin-export-xlsx",
   "version": "3.4.0",
   "description": "基于 vxe-table 的表格插件，支持导出 xlsx 格式",
   "scripts": {
@@ -50,15 +50,15 @@
     "prettier": "^2.1.2",
     "typescript": "^4.0.5",
     "vue": "^3.2.14",
-    "vxe-table": "^4.0.28",
+    "vxe-table": "~4.2.6",
     "xe-utils": "^3.3.3"
   },
   "peerDependencies": {
-    "vxe-table": "^4.0.27"
+    "vxe-table": "~4.2.6"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-extends/vxe-table-plugin-export-xlsx.git"
+    "url": "git+https://github.com/Earthwormes/vxe-table-plugin-export-xlsx.git"
   },
   "keywords": [
     "vxe-table-plugin-export-xlsx"
@@ -69,7 +69,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/x-extends/vxe-table-plugin-export-xlsx/issues"
+    "url": "https://github.com/Earthwormes/vxe-table-plugin-export-xlsx/issues"
   },
-  "homepage": "https://github.com/x-extends/vxe-table-plugin-export-xlsx#readme"
+  "homepage": "https://github.com/Earthwormes/vxe-table-plugin-export-xlsx#readme"
 }

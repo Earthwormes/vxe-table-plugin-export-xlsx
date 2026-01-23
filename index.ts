@@ -44,9 +44,9 @@ function getCellLabel (column: VxeTableDefines.ColumnInfo, cellValue: any) {
   return cellValue
 }
 
-function getFooterData (opts: VxeTablePropTypes.ExportConfig, footerData: any[][], $table: VxeTableConstructor, $grid: any = null) {
+function getFooterData (opts: VxeTablePropTypes.ExportConfig, footerData: any[][]) {
   const { footerFilterMethod } = opts
-  return footerFilterMethod ? footerData.filter((items, index) => footerFilterMethod({ items, $rowIndex: index, $table, $grid, $gantt: null })) : footerData
+  return footerFilterMethod ? footerData.filter((items, index) => footerFilterMethod({ items, $rowIndex: index })) : footerData
 }
 
 function getFooterCellValue ($table: VxeTableConstructor, _opts: VxeTablePropTypes.ExportConfig, rows: any[], column: VxeTableDefines.ColumnInfo) {
@@ -181,7 +181,7 @@ function exportXLSX (params: VxeGlobalInterceptorHandles.InterceptorExportParams
   // 处理表尾
   if (isFooter) {
     const { footerData } = $table.getTableData()
-    const footers = getFooterData(options, footerData, $table, params.$grid)
+    const footers = getFooterData(options, footerData)
     const mergeFooterItems = $table.getMergeFooterItems()
     // 处理合并
     if (isMerge && !original) {
@@ -282,7 +282,7 @@ function exportXLSX (params: VxeGlobalInterceptorHandles.InterceptorExportParams
       })
     }
     if (useStyle && sheetMethod) {
-      sheetMethod({ options: options, workbook, worksheet: sheet, columns, colgroups, datas, $table, $grid: params.$grid })
+      sheetMethod({ options: options, workbook, worksheet: sheet, columns, colgroups, datas, $table })
     }
     sheetMerges.forEach(({ s, e }) => {
       sheet.mergeCells(s.r + 1, s.c + 1, e.r + 1, e.c + 1)
