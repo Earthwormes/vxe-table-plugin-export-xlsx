@@ -5,13 +5,13 @@
 ## Installing
 
 ```shell
-npm install xe-utils vxe-table@next @Earthwormes/vxe-table-plugin-export-xlsx@next exceljs
+npm install xe-utils vxe-table@next @earthwormes/vxe-table-plugin-export-xlsx@next exceljs
 ```
 
 ```javascript
 // ...
 import VXETable from 'vxe-table'
-import VXETablePluginExportXLSX from '@Earthwormes/vxe-table-plugin-export-xlsx'
+import VXETablePluginExportXLSX from '@earthwormes/vxe-table-plugin-export-xlsx'
 // ...
 
 VXETable.use(VXETablePluginExportXLSX)
