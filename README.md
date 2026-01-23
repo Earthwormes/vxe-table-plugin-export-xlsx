@@ -1,22 +1,17 @@
 # vxe-table-plugin-export-xlsx
 
-[![gitee star](https://gitee.com/x-extends/vxe-table-plugin-export-xlsx/badge/star.svg?theme=dark)](https://gitee.com/x-extends/vxe-table-plugin-export-xlsx/stargazers)
-[![npm version](https://img.shields.io/npm/v/vxe-table-plugin-export-xlsx.svg?style=flat-square)](https://www.npmjs.com/package/vxe-table-plugin-export-xlsx)
-[![npm downloads](https://img.shields.io/npm/dm/vxe-table-plugin-export-xlsx.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vxe-table-plugin-export-xlsx)
-[![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
-
 基于 [vxe-table](https://www.npmjs.com/package/vxe-table) 的表格插件，支持导出 xlsx 格式，基于 [exceljs](https://github.com/exceljs/exceljs) 实现
 
 ## Installing
 
 ```shell
-npm install xe-utils vxe-table@next vxe-table-plugin-export-xlsx@next exceljs
+npm install xe-utils vxe-table@next @Earthwormes/vxe-table-plugin-export-xlsx@next exceljs
 ```
 
 ```javascript
 // ...
 import VXETable from 'vxe-table'
-import VXETablePluginExportXLSX from 'vxe-table-plugin-export-xlsx'
+import VXETablePluginExportXLSX from '@Earthwormes/vxe-table-plugin-export-xlsx'
 // ...
 
 VXETable.use(VXETablePluginExportXLSX)
@@ -64,7 +59,3 @@ export default {
   }
 }
 ```
-
-## License
-
-[MIT](LICENSE) © 2019-present, Xu Liangzhan
